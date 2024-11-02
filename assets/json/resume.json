@@ -1,200 +1,159 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "PHAN Vỹ Hào",
+    "label": "Data Scientist",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "vyhao03@gmail.com",
+    "phone": "(84) 947-368-311",
+    "url": "https://vyhaophan.github.io",
+    "summary": "I have more than 2 years of experience in data science, machine learning, and AI. My major is LLM models development and application in recruitment and office automation domain. I have also developed some projects in Computer Vision for tracking and counting people.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "Ho Chi Minh City, Vietnam",
+      "postalCode": "700000",
+      "city": "Ho Chi Minh City",
+      "countryCode": "VN",
+      "region": "Ho Chi Minh City"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "Facebook",
+        "username": "Phan Vỹ Hào",
+        "url": "https://www.facebook.com/phan.vyhao"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "name": "Mylong Inc.",
+      "position": "Data Scientist",
+      "url": "https://www.opusmatch.ai",
+      "startDate": "2024-08-19",
+      "endDate": "Now",
+      "summary": "Developing an intelligent HR assistant for their tasks related to recruitment and employee management process.",
+      "highlights": ["LLM models", "RAG", "OpenAI Assistant", "GraphQL"]
+    },{
+      "name": "FPT Software",
+      "position": "AI Engineer",
+      "url": "https://fptsoftware.com",
+      "startDate": "2023-02-16",
+      "endDate": "2024-08-16",
+      "summary": "Developing and maintaining intelligent RAG LLM models. Developing a japanese license plate recognition and tracking system.",
+      "highlights": ["LLM models", "Azure", "RAG", "Tracking", "Azure Services", "Kubernetes", "PaddleOCR", "Bytetrack"]
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "Kyanon Digital",
+      "position": "Machine Learning Engineer",
+      "url": "https://kyanon.digital",
+      "startDate": "2023-01-31",
+      "endDate": "2022-10-01",
+      "summary": "Developing a demo version of a pipeline for recognizing people, reID, pose detection, and tracking.",
+      "highlights": ["Docker", "AWS", "Computer Vision", "ReID", "Pose Detection", "Tracking", "MySQL"]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
+      "institution": "University of Information Technology, Ho Chi Minh City, Vietnam",
+      "location": "Ho Chi Minh City, Vietnam",
+      "url": "https://www.uit.edu.vn/",
+      "area": "Data Science",
+      "studyType": "Bachelor",
+      "startDate": "2019",
+      "endDate": "2023",
+      "score": "8.5/10",
+      "courses": ["Machine Learning", "Deep Learning", "Computer Vision", "Natural Language Processing", "Data Structures and Algorithms"]
     }
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "Intelligent Scene Text Recognition in Streaming Videos",
+      "publisher": "Springer International Publishing",
+      "releaseDate": "2022-08-17",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-15063-0_34",
+      "summary": "This research explores scene text recognition for extracting text from images and videos, which is increasingly important for visual media on social networks. We evaluated modern deep learning architectures like SAST, EAST, and Rosetta on the Vietnamese Vintext dataset by VinAI, comparing their real-time performance in frames per second."
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "A Novel License Plate Image Reconstruction System using Generative Adversarial Network",
+      "publisher": "IEEE",
+      "releaseDate": "2022-11-03",
+      "url": "https://ieeexplore.ieee.org/abstract/document/9994425",
+      "summary": "This paper proposes a two-stage deep learning based algorithm for license plate reconstruction in parking lot management systems. The first stage uses YOLOv4 transfer learning to detect license plate positions, while the second stage employs Pix2Pix GAN to reconstruct poor quality, unrecognizable license plate images into perceptible ones. The system aims to enhance license plate image quality for both human and computer recognition."
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
+      "name": "Data Science",
+      "level": "Bachelor",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Machine Learning",
+        "Deep Learning",
+        "Computer Vision",
+        "Large Language Models",
+        "RAG",
+        "Fine-tune LLM"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
+      "language": "Vietnamese",
+      "fluency": "Native",
       "icon": ""
     },
     {
       "language": "English",
-      "fluency": "Fluent",
+      "fluency": "IELTS 7.0",
       "icon": ""
     }
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "AI",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "LLM",
+        "Computer Vision",
+        "Machine Learning",
+        "Deep Learning"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "Talent AI Assistant",
+      "summary": "Led the development of an advanced AI-powered chatbot assistant for an enterprise HR platform. Key achievements include: (1) Implementation of automated daily reporting system for recruiter workforce management, (2) Development of an HR knowledge base with 92% accuracy in query responses, (3) Creation of an intelligent onboarding system with contextual navigation assistance, (4) Design and deployment of an AI-driven job matching algorithm for optimal candidate placement.",
+      "highlights": ["LLM", "RAG", "OpenAI Assistant", "GraphQL", "Function Calling"],
+      "startDate": "2024-08-19", 
+      "endDate": "Now",
+      "company": "Mylong Inc."
+    },
+    {
+      "name": "Shieve Data Platform",
+      "summary": "Led the development of core form recognition and data extraction capabilities for processing scanned technical drawings as Lead Data Engineer. Architected and implemented the solution utilizing Azure Cloud Services and Document Intelligence to enable automated document processing and analysis.",
+      "highlights": ["Azure", "Azure Storage", "Azure Document Intelligence", "Azure Cognitive Services"],
+      "company": "FPT Software"
+    },
+    {
+      "name": "Advanced Generative AI Innovation",
+      "summary": "Served dual roles as Business Analyst and AI Engineer across multiple client sub-projects focused on developing generative AI solutions. Key deliverables included fine-tuned LLM models capable of zero-shot question answering, an AI-powered physiognomy analysis assistant, and an automated system for staff ticket generation, etc.",
+      "highlights": ["Azure OpenAI", "Azure Cognitive Services", "Elastic Search", "Kubernetes", "Llama-2", "Smart chunking"],
+      "startDate": "2024-02-01",
+      "endDate": "2024-08-31",
+      "company": "FPT Software"
+    },
+    {
+      "name": "ChatGPT-based Banking Assistant",
+      "summary": "Developed and implemented an AI-powered banking assistant leveraging natural language processing to provide accurate responses based on internal documentation. Achieved 80% response accuracy while delivering the solution within an accelerated one-month development timeline.",
+      "highlights": ["Azure OpenAI", "ChatGPT-3.5", "Cognitive Search"],
+      "startDate": "2023-06-01", 
+      "endDate": "2023-07-31",
+      "company": "FPT Software"
+    },
+    {
+      "name": "Japanese Intelligent Tracking System",
+      "summary": "Responsible for the AI Engine which recognizes and tracks Japanese license plates, achieving 92% accuracy in real-time tracking at a Japanese parking station using a limited training dataset of ~300 images from the client.",
+      "highlights": ["Computer Vision", "PaddleOCR", "Bytetrack", "Real-time Tracking"],
+      "company": "FPT Software"
     }
   ]
 }
