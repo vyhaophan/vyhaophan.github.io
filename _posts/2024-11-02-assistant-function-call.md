@@ -22,7 +22,7 @@ I have dreamt of owning such a secretary for a long time, but I never found one.
 - Help me enjoy my personal life (tell me a joke, play music, instruct me to do gym properly, etc.)
 - Update me the latest news about my interests (e.g., sports, stocks, etc.) while I am driving
 - ...
-![An AI assistant helping with various tasks like scheduling, note-taking, and business management.](../assets/img/2024-11-02-assistant-function-call/assistant_img1_1102.jpg "generated with DALL·E 3")
+![An AI assistant helping with various tasks like scheduling, note-taking, and business management.](assets/img/2024-11-02-assistant-function-call/assistant_img1_1102.jpg "generated with DALL·E 3")
 
 Another scenario when I have my own online shop of coffee, I really need an assistant to help me manage my online shop. For example, at the end of the day, I need her to:
 - Check my inventory and tell me to restock the items which are running out of stock
@@ -31,7 +31,7 @@ Another scenario when I have my own online shop of coffee, I really need an assi
 - Give me some analysis on those figures and maybe some suggestions to improve my business
 - ...
 
-![An AI Assistant help analysing the business performance.](../assets/img/2024-11-02-assistant-function-call/assistant_coffee_shop_seller.png "generated with DALL·E 3")
+![An AI Assistant help analysing the business performance.](assets/img/2024-11-02-assistant-function-call/assistant_coffee_shop_seller.png "generated with DALL·E 3")
 
 Have you ever thought about how this kind of assistant works? In this post, I will guide you to set up a multi-function assistant with OpenAI API.
 
@@ -240,6 +240,126 @@ Your primary focus is to assist with report generation, provide insights from da
 Remember to stay within the scope of business and financial management, use the provided functions to retrieve data, format results clearly using bullet points, and maintain a friendly, concise, and human-like tone. Refrain from addressing tasks outside the scope.
 """
 ```
+You have your right to creatively create a system prompt, but please keep it follow my instructions above which I think is the most important core of the assistant. However, you can add other things that I may miss mentioning. If you have any more ideas on a better system prompt, please share.
 
+Secondly, you should consider which model the assistant would use. At the time of writing this post, the most powerful models are the `GPT-4o` family. I recommend using `GPT-4o-mini` or `GPT-4o` for their outstanding reasoning, problem-solving capabilities, and their speed. If budget is your concern, you can use `GPT-4o-mini` which is cheaper.
 
+Thirdly, this is optional, you can set up the parameters for the assistant performance. You should adjust the `temperature` or `top_p` (but not both at the same time) to control the assistant's creativity. The parameters will keep their own default values except when you change them.
 
+For now, you can create the assistant by running the following code:
+```python
+from openai import OpenAI
+client = OpenAI()
+my_assistant = client.beta.assistants.create(
+    instructions=system_prompt, # we already defined the system prompt
+    name="Coffee Assistant", # I name my assistant as Coffee Assistant
+    model="gpt-4o", # or "gpt-4o-mini" or other model you prefer
+    temperature=1, # default value
+    top_p=1 # default value
+)
+```
+If it created successfully, you will see the assistant id in the response.
+```plaintext
+Assistant(id='asst_HTv8wO9TKLvL00HSdd******', created_at=1730647004, description=None, instructions='\nYour name is Coffee Assistant working at the Xi Pho Coffee shop which focuses on delivering the forest farmed organic coffee to all the customers living in Vietnam. \nYour primary focus is to assist with report generation, provide insights from data analysis, support the business operations and improve the management.\nRemember to stay within the scope of business and financial management, use the provided functions to retrieve data, format results clearly using bullet points, and maintain a friendly, concise, and human-like tone. Refrain from addressing tasks outside the scope.\n', metadata={}, model='gpt-4o', name='Coffee Assistant', object='assistant', tools=[], response_format='auto', temperature=1.0, tool_resources=ToolResources(code_interpreter=None, file_search=None), top_p=1.0)
+```
+
+<details>
+  <summary>Wait, you forgot something?</summary>
+  Right, the functions are not defined yet. 😅 Don't worry, we will do that in the next section.
+</details>
+
+### Tools Creation
+
+Okay, in the previous section, we have already defined two functions to manage our coffe store, now we need to tell the assistant to use these functions by updating the assistant.
+
+The Assistant understands your functions if your function definitions are as follows:
+```python
+[
+  {
+    'type': 'function',
+    'function': {
+      'name': 'Your Function Name', 
+      'description': 'The prompt for this function',
+      'parameters': {
+        'type': 'object',
+        'properties': {
+          'param1': {'type': 'string', 'description': 'Parameter 1 description (prompt)'},
+          'param2': {'type': 'integer', 'description': 'Parameter 2 description (prompt)'}
+        },
+        'required': ['param1']
+      }
+    }
+  }
+]
+```
+You need to create:
+- The function **name**.
+- The **prompt** for that function (can be called **function description**). This prompt should clearly describe what the function does and how it is designed differently from other functions. This is important because when the assistant decides to call a function, it will use this prompt to decide which function to call. Unless the prompt clearly tells the difference between functions, the assistant may call the wrong function.
+- The **parameters** for each function. Each parameter has a **type** (string, integer, etc.), a **description** (a prompt clearly tells assistant how to extract the value of that parameter from the user's request), and it must be defined if this parameter is **required**.
+
+Come back to our example, the function definitions should be:
+```python
+function_definitions = [
+  {
+    'type': 'function',
+    'function': {
+      'name': 'CheckOutOfStock', 
+      'description': 'Use this function to check the inventory of each product and see which products are running out of stock and need to be restocked',
+      'parameters': {
+        'type': 'object',
+        'properties': {}
+      }
+    }
+  },
+  {
+    'type': 'function',
+    'function': {
+      'name': 'CheckDailyRevenue',
+      'description': 'Use this function to check the total revenue and profit of the date specified by the user',
+      'parameters': {
+        'type': 'object',
+        'properties': {
+          'date': {'type': 'string', 'description': 'The date to check the revenue and profit'}
+        },
+        'required': ['date']
+      }
+    }
+  }
+]
+```
+What have we done here?
+- We have defined the **function name** for each function: `CheckOutOfStock` and `CheckDailyRevenue`.
+- We have defined the **function description** for each function: 
+    - **CheckOutOfStock**: `Use this function to check the inventory of each product and see which products are running out of stock and need to be restocked`
+    - **CheckDailyRevenue**: `Use this function to check the total revenue and profit of the date specified by the user`
+- We have defined the **parameters** for each function:
+    - **CheckOutOfStock**: `None` (this function does not require any parameters)
+    - **CheckDailyRevenue**: `date` (this function requires a `date` parameter)
+
+Okay here we go, let's update the assistant with the function definitions:
+```python
+assistant_updated = client.beta.assistants.update(
+    assistant_id=my_assistant.id, 
+    tools=function_definitions
+)
+```
+Congratulations! You have created your assistant with the functions. If you navigate to the assistant page in the OpenAI platform at [https://platform.openai.com/assistants/{assistant_id}](https://platform.openai.com/assistants/{assistant_id}), you will see the assistant with the functions you just defined.
+
+![Coffee Assistant](assets/img/2024-11-02-assistant-function-call/openai_assistant_coffee.png)
+
+## Your first chat with the Assistant
+
+Navigate to your assistant page and click on the icon **Playground ↗** to interact with the assistant.
+
+![Click on the Playground icon](assets/img/2024-11-02-assistant-function-call/playground_click.png)
+
+Now I have just tried to ask the assistant to give me the total revenue of Nov 1st, 2024. 
+![First chat with Assistant](assets/img/2024-11-02-assistant-function-call/playground_first_chat.png)
+
+As seen in the screenshot, the assistant has called the `CheckDailyRevenue` function with the date `2024-11-01` as the argument. Therefore, you know the assistant has understood the function call and the argument. You have successfully set up your first multi-function assistant.
+
+## What's next?
+
+In the next post, I will guide you to build **a simple chatting application** to interact with the assistant. Currently, the assistant is only available on the OpenAI platform. In the real world, no one go there to chat with the assistant, so an application is necessary for the assistant to be useful.
+
+Stay tuned!
