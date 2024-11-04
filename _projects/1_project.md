@@ -2,7 +2,7 @@
 layout: page
 title: project 1
 description: with background image
-img: assets/img/12.jpg
+img: assets/img/2024-11-02-assistant-function-call/assistant_img1_1102.jpg
 importance: 1
 category: work
 related_publications: true
