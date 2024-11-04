@@ -22,7 +22,9 @@ I have dreamt of owning such a secretary for a long time, but I never found one.
 - Help me enjoy my personal life (tell me a joke, play music, instruct me to do gym properly, etc.)
 - Update me the latest news about my interests (e.g., sports, stocks, etc.) while I am driving
 - ...
-![An AI assistant helping with various tasks like scheduling, note-taking, and business management.](assets/img/2024-11-02-assistant-function-call/assistant_img1_1102.jpg "generated with DALL·E 3")
+
+
+
 
 Another scenario when I have my own online shop of coffee, I really need an assistant to help me manage my online shop. For example, at the end of the day, I need her to:
 - Check my inventory and tell me to restock the items which are running out of stock
@@ -31,7 +33,17 @@ Another scenario when I have my own online shop of coffee, I really need an assi
 - Give me some analysis on those figures and maybe some suggestions to improve my business
 - ...
 
-![An AI Assistant help analysing the business performance.](assets/img/2024-11-02-assistant-function-call/assistant_coffee_shop_seller.png "generated with DALL·E 3")
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/2024-11-02-assistant-function-call/assistant_img1_1102.jpg" title="generated with DALL·E 3" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/2024-11-02-assistant-function-call/assistant_coffee_shop_seller.png" title="generated with DALL·E 3" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    An AI Assistant help analysing the business performance.
+</div>
 
 Have you ever thought about how this kind of assistant works? In this post, I will guide you to set up a multi-function assistant with OpenAI API.
 
@@ -345,16 +357,39 @@ assistant_updated = client.beta.assistants.update(
 ```
 Congratulations! You have created your assistant with the functions. If you navigate to the assistant page in the OpenAI platform at [https://platform.openai.com/assistants/{assistant_id}](https://platform.openai.com/assistants/{assistant_id}), you will see the assistant with the functions you just defined.
 
-![Coffee Assistant](assets/img/2024-11-02-assistant-function-call/openai_assistant_coffee.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/2024-11-02-assistant-function-call/openai_assistant_coffee.png" title="My first Coffee Assistant" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Coffee Assistant
+</div>
+
 
 ## Your first chat with the Assistant
 
 Navigate to your assistant page and click on the icon **Playground ↗** to interact with the assistant.
-
-![Click on the Playground icon](assets/img/2024-11-02-assistant-function-call/playground_click.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/2024-11-02-assistant-function-call/playground_click.png" title="My first Coffee Assistant" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Click on the Playground icon
+</div>
 
 Now I have just tried to ask the assistant to give me the total revenue of Nov 1st, 2024. 
-![First chat with Assistant](assets/img/2024-11-02-assistant-function-call/playground_first_chat.png)
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/2024-11-02-assistant-function-call/playground_first_chat.png" title="My first Coffee Assistant" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    First chat with Assistant
+</div>
+
 
 As seen in the screenshot, the assistant has called the `CheckDailyRevenue` function with the date `2024-11-01` as the argument. Therefore, you know the assistant has understood the function call and the argument. You have successfully set up your first multi-function assistant.
 

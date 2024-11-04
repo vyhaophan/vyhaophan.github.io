@@ -2,96 +2,107 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: PHAN Vỹ Hào
+    - name: Email
+      value: vyhao03@gmail.com
+    - name: Phone
+      value: (84) 947-368-311
+    - name: Location
+      value: Ho Chi Minh City, Vietnam
     - name: Languages
-      value: English, German
+      value: Vietnamese (Native), English (IELTS 7.0)
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Bachelor in Data Science
+      institution: University of Information Technology, Ho Chi Minh City, Vietnam
+      year: 2019 - 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+        - GPA - 8.5/10
+        - "Key courses: Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Data Structures and Algorithms"
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Data Scientist
+      institution: Mylong Inc.
+      year: 2024 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Developing an intelligent HR assistant for recruitment and employee management processes
+        - "Technologies: LLM models, RAG, OpenAI Assistant, GraphQL"
+
+    - title: AI Engineer
+      institution: FPT Software
+      year: 2023 - 2024
       description:
-        - Description 1.
-        - Description 2.
+        - Developed and maintained intelligent RAG LLM models
+        - Built Japanese license plate recognition and tracking system
+        - "Technologies: LLM models, Azure, RAG, Tracking, Azure Services, Kubernetes, PaddleOCR, Bytetrack"
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Machine Learning Engineer
+      institution: Kyanon Digital
+      year: 2022 - 2023
       description:
+        - Developed demo pipeline for people recognition, reID, pose detection, and tracking
+        - "Technologies: Docker, AWS, Computer Vision, ReID, Pose Detection, Tracking, MySQL"
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Publications
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Intelligent Scene Text Recognition in Streaming Videos
+      institution: Springer International Publishing
+      year: 2022
+      description:
+        - Research exploring scene text recognition for extracting text from images and videos
+        - Evaluated deep learning architectures like SAST, EAST, and Rosetta on Vietnamese Vintext dataset
 
-- title: Honors and Awards
+    - title: A Novel License Plate Image Reconstruction System using Generative Adversarial Network
+      institution: IEEE
+      year: 2022
+      description:
+        - Proposed two-stage deep learning algorithm for license plate reconstruction
+        - Combined YOLOv4 transfer learning and Pix2Pix GAN for image quality enhancement
+
+- title: Projects
   type: time_table
   contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: Talent AI Assistant
+      year: 2024 - Present
+      description:
+        - Led development of AI-powered chatbot assistant for enterprise HR platform
+        - Implemented automated daily reporting system
+        - Developed HR knowledge base with 92% query accuracy
+        - Created intelligent onboarding system
+        - "Technologies: LLM, RAG, OpenAI Assistant, GraphQL, Function Calling"
 
-- title: Academic Interests
+    - title: Shieve Data Platform
+      year: 2023 - 2024
+      description:
+        - Led development of form recognition and data extraction for technical drawings
+        - "Technologies: Azure, Azure Storage, Azure Document Intelligence, Azure Cognitive Services"
+
+    - title: Advanced Generative AI Innovation
+      year: 2024
+      description:
+        - Developed fine-tuned LLM models for zero-shot QA
+        - Built AI-powered physiognomy analysis assistant
+        - Created automated staff ticket generation system
+        - "Technologies: Azure OpenAI, Azure Cognitive Services, Elastic Search, Kubernetes, Llama-2"
+
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Data Science & AI
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+        - Machine Learning
+        - Deep Learning
+        - Computer Vision
+        - Large Language Models
+        - RAG
+        - Fine-tune LLM
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>AI Research:</u> LLM, Computer Vision, Machine Learning, Deep Learning
