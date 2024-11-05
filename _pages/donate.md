@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /loveme/
-title: buy me a coffee
+title: 😍
 description: If my work here helps you, you can motivate me by a cup of coffee.
 nav: true
 nav_order: 6
