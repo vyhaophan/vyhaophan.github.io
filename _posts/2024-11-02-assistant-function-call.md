@@ -2,9 +2,9 @@
 layout: post
 title: How to set up your multi-function Assistant
 date: 2024-11-02 10:45:00-0400
-description: In this post, I will guide you to set up a 
+description: In this post, I will guide you to create a multi-function assistant with OpenAI
 tags: openai functioncall
-categories: sample-posts
+categories: assistant
 giscus_comments: true
 related_posts: false
 toc:
