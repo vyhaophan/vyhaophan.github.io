@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quickly build an app to chat with your multi-function Assistant
+title: How to send and receive messages with your multi-function Assistant
 date: 2024-11-17 12:55:00-0400
 description: How to send and receive messages with your OpenAI Assistant
 tags: openai assistant
@@ -12,7 +12,7 @@ toc:
 ---
 
 # Overview
-Hi. In my previous [post](https://vyhaophan.github.io/blog/2024/assistant-function-call/), but it is not enough. If you just have the Assistant on the OpenAI side, you might find it complicated and inconvenient to use. Everytime you want it to make an analysis on sales data, you have to go to the OpenAI side and copy the arguments from the chat history which then are used to put into tools like SQL and other visualisation tools, so you'll have the visualisation data you want.
+Hi. In my previous [post](https://vyhaophan.github.io/blog/2024/assistant-function-call/), I have built a multi-function assistant. However, it is not enough. If you just have the Assistant on the OpenAI side, you might find it complicated and inconvenient to use. Everytime you want it to make an analysis on sales data, you have to go to the OpenAI side and copy the arguments from the chat history which then are used to put into tools like SQL and other visualisation tools, so you'll have the visualisation data you want.
 
 Is the purpose of all technologies the most convenient for users? I think absolutely yes. 
 
